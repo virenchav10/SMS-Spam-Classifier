@@ -1,34 +1,35 @@
-# SMS Spam Detection Classifier
+# 📩 SMS Spam Detection Classifier
 
-A machine learning web app that predicts whether an SMS message is spam or ham. The project uses Python, Scikit-learn, TF-IDF vectorization, Naive Bayes classification, and Streamlit for the user interface.
+A machine learning-based SMS spam detection system built using **Python**, **Scikit-learn**, and **Streamlit**, designed to classify text messages as **Spam** or **Ham (legitimate messages)** using Natural Language Processing techniques.
 
-## Features
+---
 
-- Single message spam prediction
-- Bulk CSV upload prediction
-- Download prediction results as CSV
-- Text preprocessing using TF-IDF
-- Naive Bayes classification model
-- Simple Streamlit web interface
+## 📌 Overview
 
-## Dataset
+This project implements an end-to-end spam detection pipeline using the SMS Spam Collection dataset.
 
-The model was trained using the SMS Spam Collection dataset. The dataset contains SMS messages labelled as either ham or spam.
+The system includes:
 
-## Model
+- **TF-IDF Vectorization** for converting raw text into numerical features
+- **Multinomial Naive Bayes** for spam classification
+- **Model comparison** with Logistic Regression and Linear SVM
+- **Interactive Streamlit web application**
+- **Single message prediction**
+- **Bulk CSV spam classification**
+- **Downloadable prediction results**
 
-The classifier uses:
+The application can classify both manually entered messages and uploaded CSV datasets containing message text.
 
-- TF-IDF Vectorizer for converting text into numerical features
-- Multinomial Naive Bayes for classification
+---
 
-## Performance
-
-The model achieved around 96% accuracy on the test set.
-
-## How to Run
-
-Install the required packages:
+## 📂 Project Structure
 
 ```bash
-pip install -r requirements.txt
+.
+├── sms.py                          # Streamlit web application
+├── Untitled.ipynb                 # Jupyter notebook for experimentation & model training
+├── spam.csv                       # SMS spam dataset
+├── requirements.txt               # Python dependencies
+├── README.md                      # Project documentation
+└── models/
+    └── sms_spam_classifier.pkl    # Trained machine learning model
